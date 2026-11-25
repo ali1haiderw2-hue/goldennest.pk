@@ -98,7 +98,6 @@ footer a{color:#ffdc8b}
 
 <main class="wrap">
 
-<!-- HOME -->
 <div id="home" class="tab active">
 <div class="hero">
 <div class="heroGrid">
@@ -132,7 +131,6 @@ footer a{color:#ffdc8b}
 </section>
 </div>
 
-<!-- BUY HEN -->
 <div id="buy" class="tab">
 <section>
 <h2 class="sectionTitle">Buy a hen</h2>
@@ -159,7 +157,6 @@ footer a{color:#ffdc8b}
 </section>
 </div>
 
-<!-- FARM -->
 <div id="farm" class="tab">
 <section>
 <h2 class="sectionTitle">My Farm</h2>
@@ -174,7 +171,6 @@ footer a{color:#ffdc8b}
 </section>
 </div>
 
-<!-- EGGS -->
 <div id="eggs" class="tab">
 <section>
 <h2 class="sectionTitle">Sell eggs online</h2>
@@ -190,7 +186,6 @@ footer a{color:#ffdc8b}
 </section>
 </div>
 
-<!-- PROFILE -->
 <div id="profile" class="tab">
 <section>
 <h2 class="sectionTitle">Profile & support</h2>
@@ -205,7 +200,6 @@ footer a{color:#ffdc8b}
 </section>
 </div>
 
-<!-- LOGIN / SIGNUP -->
 <div id="auth" class="tab">
 <section>
 <h2 class="sectionTitle">Golden Nest Account</h2>
@@ -216,26 +210,20 @@ footer a{color:#ffdc8b}
 <label>Full Name (Signup only)</label>
 <input id="authName" type="text" placeholder="Your full name">
 </div>
-
 <div class="field">
 <label>Email Address</label>
 <input id="authEmail" type="email" placeholder="you@example.com">
 </div>
-
 <div class="field">
 <label>Password</label>
 <input id="authPassword" type="password" minlength="8" placeholder="Minimum 8 characters">
 </div>
-
 <div class="actions">
 <button class="gold" onclick="gnSignup()">Create Account</button>
 <button class="outline" onclick="gnLogin()">Login</button>
 </div>
-
 <button class="outline" style="margin-top:10px" onclick="gnLogout()">Logout</button>
-
 <div id="authMessage" class="notice">Please login or create an account.</div>
-
 <div class="panel" style="margin-top:12px">
 <b>Account status</b>
 <p id="authUser" class="muted">Checking account...</p>
@@ -253,7 +241,6 @@ footer a{color:#ffdc8b}
 </div>
 </footer>
 
-<!-- SUPABASE LIBRARY -->
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 
 <script>
@@ -343,7 +330,7 @@ alert(ur?'اردو ورژن اس ڈیمو میں مکمل شامل نہیں؛ ا
 
 const SUPABASE_URL = "https://jolspvnvkaipjmarhefz.supabase.co";
 
-const SUPABASE_PUBLISHABLE_KEY = "PASTE_YOUR_SUPABASE_PUBLISHABLE_KEY_HERE";
+const SUPABASE_PUBLISHABLE_KEY = "sb_publishable_qTUmwSKBlYTVwyviPdd-GA_waczaJ3r";
 
 let gnClient = null;
 
@@ -449,8 +436,8 @@ gnSetUser(null);
 return;
 }
 
-if(SUPABASE_PUBLISHABLE_KEY === "PASTE_YOUR_SUPABASE_PUBLISHABLE_KEY_HERE"){
-gnMessage('Apni Supabase Publishable Key code mein paste karo.');
+if(!SUPABASE_PUBLISHABLE_KEY){
+gnMessage('Supabase Publishable Key missing hai.');
 gnSetUser(null);
 return;
 }
